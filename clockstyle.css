@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero{
+    min-height:100vh;
+    width: 100%;
+    background-image: url("image.jpg");
+    background-size:cover;
+}
+
+.container{
+    width: 700px;
+    height: 180px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    gap: 2rem;
+    border-radius: 30px;
+    backdrop-filter: blur(1px);
+}
+
+.container::before{
+    content: '';
+    height: 180px;
+    width: 180px;
+    background-color: rgba(240, 159, 37, 0.623);
+    border-radius: 10px;
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    z-index: -1;
+}
+
+.container::after{
+    content: '';
+    height: 180px;
+    width: 180px;
+    background-color: teal;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    z-index: -1;
+}
+
+#hrs::after{
+    content: "HOURS";
+    font-size: 15px;
+    position: absolute;
+    bottom: 15%;
+    left: 21%;
+}
+
+#min::after{
+    content: "MIN";
+    font-size: 15px;
+    position: absolute;
+    bottom: 15%;
+    left:48%;
+}
+
+#sec::after{
+    content: "SEC";
+    font-size: 15px;
+    position: absolute;
+    bottom: 15%;
+    left: 74.5%;
+}
